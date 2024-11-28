@@ -25,10 +25,7 @@ const ResetPasswordPage = () => {
     setLoading(true); // Начинаем процесс загрузки
     try {
       // Отправляем запрос на сброс пароля
-      await axios.post(
-        `http://localhost:5173/api/v1/auth/reset-password/${token}`,
-        { password },
-      );
+      await axios.post(`/api/v1/auth/reset-password/${token}`, { password });
       setMessage("Password reset successfully"); // Устанавливаем сообщение об успешном сбросе пароля
       setTimeout(() => navigate("/login"), 2000); // Перенаправляем на страницу входа через 2 секунды
     } catch (error) {

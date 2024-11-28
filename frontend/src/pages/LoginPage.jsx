@@ -37,7 +37,7 @@ const LoginPage = () => {
 
     try {
       // Отправляем запрос на сброс пароля (замени URL на актуальный, если доступен)
-      await axios.post("http://localhost:5173/api/v1/auth/forgot-password", {
+      await axios.post(`/api/v1/auth/forgot-password`, {
         email: resetEmail,
       });
       setResetMessage("Password reset link sent to your email!"); // Устанавливаем сообщение об успешной отправке
