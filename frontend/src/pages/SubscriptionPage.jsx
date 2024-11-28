@@ -68,7 +68,7 @@ const SubscriptionPage = () => {
         return;
       }
 
-      await axios.post("/payment-success", {
+      await axios.post("/api/payment-success", {
         email: "user@example.com", // Используйте реальный email
         amount: 1000,
       });
