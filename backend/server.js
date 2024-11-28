@@ -44,11 +44,6 @@ app.use("/api/v1/tv", protectRoute, tvRoutes);
 app.use("/api/v1/search", protectRoute, searchRoutes);
 app.use("/api", mailerRoutes);
 
-// Главная страница
-app.get("/", (req, res) => {
-  res.send("Stripe payment");
-});
-
 // Создание платежного намерения
 app.post("/create-payment-intent", async (req, res) => {
   const { amount, currency } = req.body;
