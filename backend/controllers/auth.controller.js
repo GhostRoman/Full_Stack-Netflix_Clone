@@ -84,7 +84,7 @@ export async function signup(req, res) {
       html: `
         <h1>Welcome!</h1>
         <p>Please confirm your registration:</p>
-        <a href="https://full-stack-netflix-clone.onrender.com/login">Confirm Email</a>
+        <a href="/login">Confirm Email</a>
       `,
     });
 
@@ -118,7 +118,7 @@ export async function forgotPassword(req, res) {
     user.resetTokenExpire = Date.now() + 3600000; // 1 час
     await user.save();
 
-    const resetLink = `https://full-stack-netflix-clone.onrender.com/reset-password/${resetToken}`;
+    const resetLink = `/reset-password/${resetToken}`;
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
