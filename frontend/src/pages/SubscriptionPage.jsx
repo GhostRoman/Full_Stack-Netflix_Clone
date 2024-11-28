@@ -47,13 +47,10 @@ const SubscriptionPage = () => {
         return;
       }
 
-      const { data } = await axios.post(
-        "http://localhost:5000/create-payment-intent",
-        {
-          amount: 1000,
-          currency: "usd",
-        },
-      );
+      const { data } = await axios.post("/create-payment-intent", {
+        amount: 1000,
+        currency: "usd",
+      });
 
       const { error: confirmError } = await stripe.confirmCardPayment(
         data.clientSecret,
@@ -71,7 +68,7 @@ const SubscriptionPage = () => {
         return;
       }
 
-      await axios.post("http://localhost:5000/api/payment-success", {
+      await axios.post("/payment-success", {
         email: "user@example.com", // Используйте реальный email
         amount: 1000,
       });
