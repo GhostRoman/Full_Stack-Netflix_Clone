@@ -80,7 +80,7 @@
 
 5.  Как развернуть
 
-         Установите зависимости: npm install mongoose, express, stripe, npm i tmdb-ts , nodemailer, nodemon, jsonwebtoken, dotenv, cors, cookie-parser, body-parser, bcrypt, axios
+         Установите зависимости: npm install mongoose express stripe npm i tmdb-ts nodemailer nodemon jsonwebtoken dotenv cors cookie-parser body-parser bcrypt axios
          Настройте файл .env
          Запустите сервер: npm run dev
 
