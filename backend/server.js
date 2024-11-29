@@ -14,6 +14,7 @@ import mailerRoutes from "./routes/mailer.route.js";
 import { ENV_VARS } from "./config/envVars.js";
 import { connectDB } from "./config/db.js";
 import { protectRoute } from "./middleware/protectRoute.js";
+import { sendPaymentSuccessEmail } from "./controllers/mailer.controller.js";
 
 // Загрузка переменных окружения
 dotenv.config();
